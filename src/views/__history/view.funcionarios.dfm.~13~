@@ -1,0 +1,246 @@
+inherited ViewFuncionarios: TViewFuncionarios
+  Caption = 'ViewFuncionarios'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited PanelLinhadefundo: TPanel
+    inherited CardPanel_Lista: TCardPanel
+      inherited Card_pesquisa: TCard
+        inherited PanelTopo: TPanel
+          inherited LabelTitulo: TLabel
+            Caption = 'Funcion'#225'rios'
+            ExplicitWidth = 109
+          end
+        end
+        inherited DBG_dados: TDBGrid
+          GradientEndColor = clBlack
+          GradientStartColor = clBlack
+          Columns = <
+            item
+              Color = clAqua
+              Expanded = False
+              FieldName = 'C'#243'digo'
+              Width = 80
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Nome'
+              Width = 366
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Telefone'
+              Width = 158
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CPF'
+              Width = 157
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'RG'
+              Width = 156
+              Visible = True
+            end>
+        end
+      end
+      inherited Card_cadastro: TCard
+        object Label4: TLabel [0]
+          AlignWithMargins = True
+          Left = 210
+          Top = 148
+          Width = 54
+          Height = 21
+          Caption = 'C'#243'digo'
+          FocusControl = DBEdit1
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label6: TLabel [1]
+          AlignWithMargins = True
+          Left = 374
+          Top = 148
+          Width = 78
+          Height = 21
+          Caption = 'CPF / CNPJ'
+          FocusControl = DBEdit3
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label5: TLabel [2]
+          AlignWithMargins = True
+          Left = 210
+          Top = 196
+          Width = 158
+          Height = 21
+          Caption = 'Nome do Funcion'#225'rio'
+          FocusControl = DBEdit2
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label8: TLabel [3]
+          AlignWithMargins = True
+          Left = 210
+          Top = 246
+          Width = 63
+          Height = 21
+          Caption = 'Telefone'
+          FocusControl = DBEdit5
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label9: TLabel [4]
+          AlignWithMargins = True
+          Left = 560
+          Top = 246
+          Width = 49
+          Height = 21
+          Caption = 'RG / IE'
+          FocusControl = DBEdit6
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label10: TLabel [5]
+          AlignWithMargins = True
+          Left = 210
+          Top = 294
+          Width = 87
+          Height = 21
+          Caption = 'Observa'#231#227'o'
+          FocusControl = DBEdit7
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        inherited Panel2: TPanel
+          inherited Label11: TLabel
+            Caption = 'Funcion'#225'rios'
+            ExplicitWidth = 109
+          end
+        end
+        object DBEdit1: TDBEdit
+          AlignWithMargins = True
+          Left = 210
+          Top = 172
+          Width = 136
+          Height = 21
+          DataField = 'PES_CODIGO'
+          DataSource = DSDados
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object DBEdit3: TDBEdit
+          AlignWithMargins = True
+          Left = 374
+          Top = 172
+          Width = 468
+          Height = 21
+          DataField = 'PES_CPFCNPJ'
+          DataSource = DSDados
+          TabOrder = 2
+        end
+        object DBEdit2: TDBEdit
+          AlignWithMargins = True
+          Left = 210
+          Top = 217
+          Width = 632
+          Height = 21
+          DataField = 'PES_RAZAO'
+          DataSource = DSDados
+          TabOrder = 3
+        end
+        object DBEdit5: TDBEdit
+          AlignWithMargins = True
+          Left = 210
+          Top = 267
+          Width = 279
+          Height = 21
+          DataField = 'PES_TELEFONE'
+          DataSource = DSDados
+          TabOrder = 4
+        end
+        object DBEdit6: TDBEdit
+          AlignWithMargins = True
+          Left = 560
+          Top = 267
+          Width = 282
+          Height = 21
+          DataField = 'PES_IERG'
+          DataSource = DSDados
+          TabOrder = 5
+        end
+        object Panel1: TPanel
+          Left = 0
+          Top = 35
+          Width = 1020
+          Height = 71
+          Align = alTop
+          Color = 12961221
+          ParentBackground = False
+          TabOrder = 6
+          DesignSize = (
+            1020
+            71)
+          object LabelCadastro: TLabel
+            AlignWithMargins = True
+            Left = 340
+            Top = 18
+            Width = 309
+            Height = 30
+            Alignment = taCenter
+            Anchors = [akLeft, akTop, akRight, akBottom]
+            Caption = '[ CADASTRO DE FUNCION'#193'RIOS ]'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -21
+            Font.Name = 'Segoe UI Semilight'
+            Font.Style = []
+            ParentFont = False
+          end
+        end
+        object DBEdit7: TDBEdit
+          AlignWithMargins = True
+          Left = 210
+          Top = 316
+          Width = 632
+          Height = 21
+          DataField = 'PES_OBSERVACAO'
+          DataSource = DSDados
+          TabOrder = 7
+        end
+      end
+    end
+  end
+  inherited DSDados: TDataSource
+    DataSet = ServiceCadastro.QRY_pessoas
+    Left = 296
+    Top = 0
+  end
+end

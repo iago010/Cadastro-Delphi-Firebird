@@ -1,0 +1,326 @@
+inherited ViewClientes: TViewClientes
+  Caption = 'ViewClientes'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited PanelLinhadefundo: TPanel
+    inherited CardPanel_Lista: TCardPanel
+      inherited Card_pesquisa: TCard
+        inherited PanelTopo: TPanel
+          inherited LabelTitulo: TLabel
+            Caption = 'CLIENTES'
+            ExplicitWidth = 82
+          end
+        end
+        inherited DBG_dados: TDBGrid
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'PES_CODIGO'
+              Title.Caption = 'C'#243'digo'
+              Width = 54
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_RAZAO'
+              Title.Caption = 'Nome do Cliente'
+              Width = 201
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_TELEFONE'
+              Title.Caption = 'Telefone'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_CPFCNPJ'
+              Title.Caption = 'CPF / CNPJ'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_IERG'
+              Title.Caption = 'RG / IE'
+              Visible = True
+            end>
+        end
+      end
+      inherited Card_cadastro: TCard
+        object Label2: TLabel [0]
+          AlignWithMargins = True
+          Left = 3
+          Top = 109
+          Width = 1014
+          Height = 401
+          Align = alClient
+          Caption = 'CLIENTES'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWhite
+          Font.Height = -19
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnMouseDown = LabelTituloMouseDown
+          ExplicitWidth = 82
+          ExplicitHeight = 25
+        end
+        object Label1: TLabel [1]
+          AlignWithMargins = True
+          Left = 3
+          Top = 109
+          Width = 1014
+          Height = 401
+          Align = alClient
+          Caption = 'v'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWhite
+          Font.Height = -19
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnMouseDown = LabelTituloMouseDown
+          ExplicitWidth = 10
+          ExplicitHeight = 25
+        end
+        object Image1: TImage [2]
+          Left = 0
+          Top = 106
+          Width = 1020
+          Height = 407
+          Align = alClient
+          Picture.Data = {
+            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000200000
+            00200806000000737A7AF4000000017352474200AECE1CE90000008249444154
+            78DAEDD4510A80300806E0BC99DDA86EF877836E64057B69088B04D7E2F765E0
+            267E0F53993A871040409D30335C47955E4564CF0298F36E3E0128F7EA009F37
+            14D9A280D7CD0BE0D673488006016801E0D42D699F303BBE07E01E18610CBB03
+            3408400B00A78E7B200FC03D30C218760768108016004E1DF70001FF051CC0AC
+            90214BB977610000000049454E44AE426082}
+          ExplicitLeft = 16
+          ExplicitTop = 8
+          ExplicitWidth = 105
+          ExplicitHeight = 105
+        end
+        object Label3: TLabel [3]
+          AlignWithMargins = True
+          Left = 3
+          Top = 109
+          Width = 1014
+          Height = 401
+          Align = alClient
+          Caption = 'CLIENTES'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWhite
+          Font.Height = -19
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnMouseDown = LabelTituloMouseDown
+          ExplicitWidth = 82
+          ExplicitHeight = 25
+        end
+        object Label4: TLabel [4]
+          Left = 28
+          Top = 112
+          Width = 54
+          Height = 21
+          Caption = 'C'#243'digo'
+          FocusControl = DBEdit1
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label5: TLabel [5]
+          Left = 28
+          Top = 160
+          Width = 124
+          Height = 21
+          Caption = 'Nome do Cliente'
+          FocusControl = DBEdit2
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label6: TLabel [6]
+          Left = 192
+          Top = 112
+          Width = 78
+          Height = 21
+          Caption = 'CPF / CNPJ'
+          FocusControl = DBEdit3
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label7: TLabel [7]
+          Left = 28
+          Top = 208
+          Width = 106
+          Height = 21
+          Caption = 'Nome Fantasia'
+          FocusControl = DBEdit4
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label8: TLabel [8]
+          Left = 28
+          Top = 264
+          Width = 63
+          Height = 21
+          Caption = 'Telefone'
+          FocusControl = DBEdit5
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label9: TLabel [9]
+          Left = 378
+          Top = 264
+          Width = 49
+          Height = 21
+          Caption = 'RG / IE'
+          FocusControl = DBEdit6
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label10: TLabel [10]
+          Left = 28
+          Top = 312
+          Width = 87
+          Height = 21
+          Caption = 'Observa'#231#227'o'
+          FocusControl = DBEdit7
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Panel1: TPanel [11]
+          Left = 0
+          Top = 35
+          Width = 1020
+          Height = 71
+          Align = alTop
+          Color = 12961221
+          ParentBackground = False
+          TabOrder = 0
+          object LabelCadastro: TLabel
+            AlignWithMargins = True
+            Left = 420
+            Top = 18
+            Width = 251
+            Height = 30
+            Alignment = taCenter
+            Caption = '[ CADASTRO DE CLIENTES ]'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -21
+            Font.Name = 'Segoe UI Semilight'
+            Font.Style = []
+            ParentFont = False
+          end
+        end
+        object DBEdit1: TDBEdit [12]
+          Left = 28
+          Top = 136
+          Width = 134
+          Height = 21
+          DataField = 'PES_CODIGO'
+          DataSource = DSDados
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object DBEdit2: TDBEdit [13]
+          Left = 28
+          Top = 181
+          Width = 630
+          Height = 21
+          DataField = 'PES_RAZAO'
+          DataSource = DSDados
+          TabOrder = 2
+        end
+        object DBEdit3: TDBEdit [14]
+          Left = 192
+          Top = 136
+          Width = 466
+          Height = 21
+          DataField = 'PES_CPFCNPJ'
+          DataSource = DSDados
+          TabOrder = 3
+        end
+        object DBEdit4: TDBEdit [15]
+          Left = 28
+          Top = 229
+          Width = 630
+          Height = 21
+          DataField = 'PES_FANTASIA'
+          DataSource = DSDados
+          TabOrder = 4
+        end
+        object DBEdit5: TDBEdit [16]
+          Left = 28
+          Top = 285
+          Width = 277
+          Height = 21
+          DataField = 'PES_TELEFONE'
+          DataSource = DSDados
+          TabOrder = 5
+        end
+        object DBEdit6: TDBEdit [17]
+          Left = 378
+          Top = 285
+          Width = 280
+          Height = 21
+          DataField = 'PES_IERG'
+          DataSource = DSDados
+          TabOrder = 6
+        end
+        object DBEdit7: TDBEdit [18]
+          Left = 28
+          Top = 334
+          Width = 630
+          Height = 21
+          DataField = 'PES_OBSERVACAO'
+          DataSource = DSDados
+          TabOrder = 7
+        end
+        inherited Panel2: TPanel
+          TabOrder = 8
+          inherited Label11: TLabel
+            Caption = 'CLIENTES'
+            ExplicitWidth = 82
+          end
+        end
+      end
+    end
+  end
+  inherited DSDados: TDataSource
+    DataSet = ServiceCadastro.QRY_pessoas
+    Left = 696
+    Top = 16
+  end
+end

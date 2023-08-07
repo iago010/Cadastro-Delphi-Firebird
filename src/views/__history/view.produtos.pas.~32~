@@ -1,0 +1,102 @@
+unit view.produtos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base.listas, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.WinXCtrls,
+  Vcl.WinXPanels, Vcl.Buttons, service.cadastro, Provider.constants, Vcl.Mask,
+  Vcl.DBCtrls, view.mensagens;
+
+type
+  TViewProdutos = class(TViewBaseListas)
+    DSproduto2: TDataSource;
+    PnlDetalhe: TPanel;
+    DBG_detalhes: TDBGrid;
+    Panel1: TPanel;
+    LabelCadastro: TLabel;
+    Label3: TLabel;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label4: TLabel;
+    DBEdit3: TDBEdit;
+    Label5: TLabel;
+    DBEdit4: TDBEdit;
+    Label6: TLabel;
+    DBEdit5: TDBEdit;
+    Label7: TLabel;
+    DBEdit6: TDBEdit;
+    Label8: TLabel;
+    DBEdit7: TDBEdit;
+    Label9: TLabel;
+    DBEdit8: TDBEdit;
+    Label10: TLabel;
+    DBEdit9: TDBEdit;
+    Label12: TLabel;
+    DBEdit10: TDBEdit;
+    procedure FormShow(Sender: TObject);
+    procedure DSDadosDataChange(Sender: TObject; Field: TField);
+    procedure BtnSalvarClick(Sender: TObject);
+    procedure BtnNovoClick(Sender: TObject);
+    procedure BtnEditarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewProdutos: TViewProdutos;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewProdutos.BtnEditarClick(Sender: TObject);
+begin
+  inherited;
+  DSproduto2.DataSet.Edit;
+end;
+
+procedure TViewProdutos.BtnNovoClick(Sender: TObject);
+begin
+  inherited;
+   ServiceCadastro.QRY_produto1PR1_Grupo.AsInteger := 1;
+   ServiceCadastro.QRY_produto1PR1_SubGrupo.AsInteger := 1;
+   ServiceCadastro.QRY_produto2.Open();
+   ServiceCadastro.QRY_produto2.Insert;
+end;
+
+procedure TViewProdutos.BtnSalvarClick(Sender: TObject);
+begin     //salvar
+  inherited;
+
+   dsDados.DataSet.Post;
+
+   ServiceCadastro.QRY_produto2.Edit;
+   ServiceCadastro.QRY_produto2PR2_CODIGOPR1.AsInteger := ServiceCadastro.QRY_produto1PR1_CODIGO.AsInteger;
+   ServiceCadastro.QRY_produto2PR2_FILIAL.AsInteger := iCOD_FILIAL;
+   ServiceCadastro.QRY_produto2PR2_SITRIBUTARIA.AsInteger := 1;
+   ServiceCadastro.QRY_produto2.Post;
+
+   TViewMensagens.Mensagens('Produto salvo com sucesso.', '[ SALVO ]','I',[mbOk]);
+   CardPanel_Lista.ActiveCard := Card_pesquisa;
+
+end;
+
+procedure TViewProdutos.DSDadosDataChange(Sender: TObject; Field: TField);
+begin
+  inherited;
+    // GET_Produtos_detalhes(ServiceCadastro.QRY_produto1PR1_CODIGO.AsInteger, iCOD_FILIAL);
+end;
+
+procedure TViewProdutos.FormShow(Sender: TObject);
+begin        //show
+  inherited;
+     GET_Produtos;
+end;
+
+end.

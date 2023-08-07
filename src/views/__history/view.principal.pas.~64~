@@ -1,0 +1,227 @@
+unit view.principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.Imaging.pngimage, System.ImageList, Vcl.ImgList, System.Actions,
+  Vcl.ActnList, Provider.constants, view.clientes, view.fornecedores,
+  view.produtos, ShellAPI, view.funcionarios, view.vendas;
+
+type
+  TViewPrincipal = class(TForm)
+    PanelTopo: TPanel;
+    PanelMenu: TPanel;
+    PanelConteudo: TPanel;
+    PanelRodape: TPanel;
+    PanelLogo: TPanel;
+    PanelAmarelinho: TPanel;
+    PanelConteudoLogo: TPanel;
+    LabelSubMarca: TLabel;
+    LabelMarca: TLabel;
+    PanelVersao: TPanel;
+    Label3: TLabel;
+    Label4: TLabel;
+    PanelUsuario: TPanel;
+    PanelImagemUsuario: TPanel;
+    Panel1: TPanel;
+    LabelUsuario: TLabel;
+    LabelPerfil: TLabel;
+    PanelLicenciado: TPanel;
+    PanelAmerelinho2: TPanel;
+    Label5: TLabel;
+    LblLicenciado: TLabel;
+    PanelSair: TPanel;
+    PanelShapeMenu: TPanel;
+    ShapeMenu: TShape;
+    PanelDadosMenu: TPanel;
+    SpeedButtonClientes: TSpeedButton;
+    SpeedButtonCaixa: TSpeedButton;
+    SpeedButtonProdutos: TSpeedButton;
+    SpeedButtonFornecedores: TSpeedButton;
+    SpeedButtonConfig: TSpeedButton;
+    SpeedButtonSair: TSpeedButton;
+    ImgUserBranca: TImage;
+    ImgUserLaranja: TImage;
+    PanelAmerelinho3: TPanel;
+    Image1: TImage;
+    SpeedButtonVendas: TSpeedButton;
+    SpeedButtonFuncionarios: TSpeedButton;
+    procedure SpeedButtonSairClick(Sender: TObject);
+    procedure SpeedButtonClientesClick(Sender: TObject);
+    procedure SpeedButtonCaixaClick(Sender: TObject);
+    procedure SpeedButtonFornecedoresClick(Sender: TObject);
+    procedure SpeedButtonProdutosClick(Sender: TObject);
+    procedure SpeedButtonConfigClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure LabelMarcaMouseEnter(Sender: TObject);
+    procedure LabelMarcaMouseLeave(Sender: TObject);
+    procedure ImgUserBrancaMouseEnter(Sender: TObject);
+    procedure ImgUserBrancaMouseLeave(Sender: TObject);
+    procedure LabelMarcaClick(Sender: TObject);
+    procedure SpeedButtonFuncionariosClick(Sender: TObject);
+    procedure SpeedButtonVendasClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure GET_LineMenu (Sender: TObject);
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewPrincipal: TViewPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewPrincipal.FormShow(Sender: TObject);
+begin       //show form principal
+   GET_LineMenu (SpeedButtonClientes);
+   lblLicenciado.Caption := sRAZAO_FILIAL;
+end;
+
+procedure TViewPrincipal.GET_LineMenu(Sender: TObject);
+begin
+  ShapeMenu.Left := 0;
+  ShapeMenu.Top := 0;
+  ShapeMenu.Height := TSpeedButton(Sender).Height;
+  ShapeMenu.Top := TSpeedButton(Sender).Top;
+  PanelShapeMenu.Repaint;
+end;
+
+procedure TViewPrincipal.ImgUserBrancaMouseEnter(Sender: TObject);
+begin
+  ImgUserBranca.Visible := false;
+  ImgUserLaranja.Visible := true;
+end;
+
+procedure TViewPrincipal.ImgUserBrancaMouseLeave(Sender: TObject);
+begin
+  ImgUserBranca.Visible := true;
+  ImgUserLaranja.Visible := false;
+end;
+
+procedure TViewPrincipal.LabelMarcaClick(Sender: TObject);
+begin
+   ShellExecute(0, 'open', 'https://github.com/iago010', nil, nil, SW_SHOWNORMAL);
+end;
+
+procedure TViewPrincipal.LabelMarcaMouseEnter(Sender: TObject);
+begin
+  LabelMarca.font.Color:= $000FBBD9;
+end;
+
+procedure TViewPrincipal.LabelMarcaMouseLeave(Sender: TObject);
+begin
+  LabelMarca.Font.Color:= clBtnFace;
+end;
+
+procedure TViewPrincipal.SpeedButtonCaixaClick(Sender: TObject);
+begin
+ GET_LineMenu (Sender);
+end;
+
+procedure TViewPrincipal.SpeedButtonClientesClick(Sender: TObject);
+begin
+    GET_LineMenu (Sender);
+    ViewClientes := TViewClientes.Create(Self);
+
+    try
+      //centralizar form
+      ViewClientes.Top := Round(panelTopo.Height + 29 + ((panelConteudo.Height - ViewClientes.Height)/2));
+      ViewClientes.Left := Round(panelDadosMenu.Width + ((panelConteudo.Width - ViewClientes.Width)/2));
+
+     // ViewClientes.Tag := PessoasToInt(tpCliente);
+       ViewClientes.ShowModal;
+    finally
+     // FreeAndNil(ViewClientes);
+    end;
+end;
+
+procedure TViewPrincipal.SpeedButtonConfigClick(Sender: TObject);
+begin
+  GET_LineMenu (Sender);
+end;
+
+procedure TViewPrincipal.SpeedButtonFornecedoresClick(Sender: TObject);
+begin  //fornecedores
+ GET_LineMenu (Sender);
+
+ Viewfornecedores := TViewFornecedores.Create(Self);
+
+ try
+    //centralizar form
+    ViewFornecedores.Top := Round(panelTopo.Height + 29 + ((panelConteudo.Height - ViewClientes.Height)/2));
+    ViewFornecedores.Left := Round(panelDadosMenu.Width + ((panelConteudo.Width - ViewClientes.Width)/2));
+
+   ViewFornecedores.ShowModal;
+
+ finally
+   FreeAndNil(ViewFornecedores);
+
+
+
+ end;
+end;
+
+procedure TViewPrincipal.SpeedButtonFuncionariosClick(Sender: TObject);
+begin     //funcionarios
+  GET_LineMenu (Sender);
+
+   ViewFuncionarios := TViewFuncionarios.Create(Self);
+
+    try
+      //centralizar form
+       ViewFuncionarios.Top := Round(panelTopo.Height + 29 + ((panelConteudo.Height - ViewFuncionarios.Height)/2));
+       ViewFuncionarios.Left := Round(panelDadosMenu.Width + ((panelConteudo.Width - ViewFuncionarios.Width)/2));
+
+       ViewFuncionarios.ShowModal;
+    finally
+      FreeAndNil(ViewFuncionarios);
+    end;
+
+end;
+
+procedure TViewPrincipal.SpeedButtonProdutosClick(Sender: TObject);
+begin      //produtos
+   GET_LineMenu (Sender);
+
+   ViewProdutos := TViewProdutos.Create(Self);
+
+    try
+      //centralizar form
+       ViewProdutos.Top := Round(panelTopo.Height + 29 + ((panelConteudo.Height - ViewProdutos.Height)/2));
+       ViewProdutos.Left := Round(panelDadosMenu.Width + ((panelConteudo.Width - ViewProdutos.Width)/2));
+
+       ViewProdutos.ShowModal;
+    finally
+      FreeAndNil(ViewProdutos);
+    end;
+end;
+
+procedure TViewPrincipal.SpeedButtonSairClick(Sender: TObject);
+begin
+  application.terminate;
+end;
+
+procedure TViewPrincipal.SpeedButtonVendasClick(Sender: TObject);
+begin    //vendas
+  GET_LineMenu (Sender);
+
+   ViewVendas := TViewVendas.Create(Self);
+
+    try
+      //centralizar form
+       ViewVendas.Top := Round(panelTopo.Height + 29 + ((panelConteudo.Height - ViewVendas.Height)/2));
+       ViewVendas.Left := Round(panelDadosMenu.Width + ((panelConteudo.Width - ViewVendas.Width)/2));
+
+       ViewVendas.ShowModal;
+    finally
+      FreeAndNil(ViewVendas);
+    end;
+
+end;
+
+end.

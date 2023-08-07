@@ -1,0 +1,27 @@
+inherited ViewCaixa: TViewCaixa
+  Caption = 'ViewCaixa'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited PanelLinhadefundo: TPanel
+    inherited CardPanel_Lista: TCardPanel
+      inherited Card_pesquisa: TCard
+        inherited PanelTopo: TPanel
+          inherited LabelTitulo: TLabel
+            Width = 892
+            Height = 29
+            Caption = 'CAIXA'
+            ExplicitWidth = 56
+          end
+        end
+      end
+      inherited Card_cadastro: TCard
+        inherited Panel2: TPanel
+          inherited Label11: TLabel
+            Width = 892
+            Height = 29
+          end
+        end
+      end
+    end
+  end
+end

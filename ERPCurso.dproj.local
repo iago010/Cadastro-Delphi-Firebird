@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/16 00:13:11.000.369,=C:\Users\Iago\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/16 00:16:58.000.116,C:\Users\Iago\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\projetos Programas\ERPDelphi\src\views\view.principal.dfm</Transaction>
+    <Transaction>2023/01/16 00:16:58.000.116,C:\Users\Iago\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\projetos Programas\ERPDelphi\src\views\view.principal.pas</Transaction>
+    <Transaction>2023/01/16 00:19:19.000.418,C:\Users\Iago\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\projetos Programas\ERPDelphi\ERPCurso.dproj</Transaction>
+    <Transaction>2023/02/06 22:24:37.000.864,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/02/06 22:27:42.000.854,D:\projetos Programas\ERPDelphi\src\services\service.conexao.pas=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/02/06 22:27:42.000.854,D:\projetos Programas\ERPDelphi\src\services\service.conexao.dfm=D:\projetos Programas\ERPDelphi\Unit1.dfm</Transaction>
+    <Transaction>2023/02/13 21:14:56.000.975,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/02/13 21:15:43.000.531,D:\projetos Programas\ERPDelphi\Unit1.pas=D:\projetos Programas\ERPDelphi\src\services\service.cadastro.pas</Transaction>
+    <Transaction>2023/02/13 21:15:43.000.531,D:\projetos Programas\ERPDelphi\Unit1.dfm=D:\projetos Programas\ERPDelphi\src\services\service.cadastro.dfm</Transaction>
+    <Transaction>2023/02/15 18:16:33.000.640,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/02/15 18:18:54.000.644,D:\projetos Programas\ERPDelphi\src\providers\Provider.constants.pas=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/02/15 19:43:51.000.170,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/02/15 19:57:35.000.170,D:\projetos Programas\ERPDelphi\src\views\view.base.pas=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/02/15 19:57:35.000.170,D:\projetos Programas\ERPDelphi\src\views\view.base.dfm=D:\projetos Programas\ERPDelphi\Unit1.dfm</Transaction>
+    <Transaction>2023/02/15 20:20:23.000.076,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/02/15 20:22:00.000.522,D:\projetos Programas\ERPDelphi\src\views\view.base.listas.pas=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/02/15 20:22:00.000.522,D:\projetos Programas\ERPDelphi\src\views\view.base.listas.dfm=D:\projetos Programas\ERPDelphi\Unit1.dfm</Transaction>
+    <Transaction>2023/02/19 21:02:58.000.827,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/02/19 21:04:26.000.438,D:\projetos Programas\ERPDelphi\src\views\view.clientes.dfm=D:\projetos Programas\ERPDelphi\Unit1.dfm</Transaction>
+    <Transaction>2023/02/19 21:04:26.000.438,D:\projetos Programas\ERPDelphi\src\views\view.clientes.pas=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/05/08 20:06:29.000.273,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/05/08 20:08:08.000.255,D:\projetos Programas\ERPDelphi\Unit1.dfm=D:\projetos Programas\ERPDelphi\src\views\view.fornecedores.dfm</Transaction>
+    <Transaction>2023/05/08 20:08:08.000.255,D:\projetos Programas\ERPDelphi\Unit1.pas=D:\projetos Programas\ERPDelphi\src\views\view.fornecedores.pas</Transaction>
+    <Transaction>2023/05/21 22:48:00.000.699,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/05/21 22:48:35.000.073,D:\projetos Programas\ERPDelphi\Unit1.dfm=D:\projetos Programas\ERPDelphi\src\views\view.produtos.dfm</Transaction>
+    <Transaction>2023/05/21 22:48:35.000.073,D:\projetos Programas\ERPDelphi\Unit1.pas=D:\projetos Programas\ERPDelphi\src\views\view.produtos.pas</Transaction>
+    <Transaction>2023/07/11 22:59:41.000.288,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/07/11 23:03:03.000.325,D:\projetos Programas\ERPDelphi\Unit1.dfm=D:\projetos Programas\ERPDelphi\src\views\view.mensagens.dfm</Transaction>
+    <Transaction>2023/07/11 23:03:03.000.325,D:\projetos Programas\ERPDelphi\Unit1.pas=D:\projetos Programas\ERPDelphi\src\views\view.mensagens.pas</Transaction>
+    <Transaction>2023/07/15 00:41:06.000.460,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/07/15 00:41:44.000.019,D:\projetos Programas\ERPDelphi\src\views\view.fundo.pas=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/07/15 00:41:44.000.019,D:\projetos Programas\ERPDelphi\src\views\view.fundo.dfm=D:\projetos Programas\ERPDelphi\Unit1.dfm</Transaction>
+    <Transaction>2023/07/19 21:49:33.000.170,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/07/19 21:50:00.000.103,D:\projetos Programas\ERPDelphi\src\views\view.funcionarios.pas=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/07/19 21:50:00.000.103,D:\projetos Programas\ERPDelphi\src\views\view.funcionarios.dfm=D:\projetos Programas\ERPDelphi\Unit1.dfm</Transaction>
+    <Transaction>2023/07/20 21:49:51.000.324,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/07/20 21:50:58.000.618,D:\projetos Programas\ERPDelphi\src\views\view.vendas.dfm=D:\projetos Programas\ERPDelphi\Unit1.dfm</Transaction>
+    <Transaction>2023/07/20 21:50:58.000.618,D:\projetos Programas\ERPDelphi\src\views\view.vendas.pas=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/07/26 22:41:39.000.069,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/07/26 22:47:51.000.075,D:\projetos Programas\ERPDelphi\Unit1.dfm=D:\projetos Programas\ERPDelphi\src\views\view.formapgto.dfm</Transaction>
+    <Transaction>2023/07/26 22:47:51.000.075,D:\projetos Programas\ERPDelphi\Unit1.pas=D:\projetos Programas\ERPDelphi\src\views\view.formapgto.pas</Transaction>
+    <Transaction>2023/07/31 23:43:06.000.932,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/07/31 23:44:59.000.211,D:\projetos Programas\ERPDelphi\Unit1.dfm=D:\projetos Programas\ERPDelphi\src\views\view.caixa.dfm</Transaction>
+    <Transaction>2023/07/31 23:44:59.000.211,D:\projetos Programas\ERPDelphi\Unit1.pas=D:\projetos Programas\ERPDelphi\src\views\view.caixa.pas</Transaction>
+    <Transaction>2023/08/03 19:03:37.347,=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/08/03 19:06:42.951,D:\projetos Programas\ERPDelphi\src\views\view.receber.pas=D:\projetos Programas\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/08/03 19:06:42.951,D:\projetos Programas\ERPDelphi\src\views\view.receber.dfm=D:\projetos Programas\ERPDelphi\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,73 @@
+inherited ViewCaixa: TViewCaixa
+  Caption = 'ViewCaixa'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited PanelLinhadefundo: TPanel
+    inherited CardPanel_Lista: TCardPanel
+      inherited Card_pesquisa: TCard
+        inherited PanelTopo: TPanel
+          inherited LabelTitulo: TLabel
+            Width = 892
+            Height = 29
+            Caption = 'CAIXA'
+            ExplicitWidth = 56
+          end
+        end
+        inherited DBG_dados: TDBGrid
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'CAI_CODIGO'
+              Title.Caption = 'N'#250'm. Lan'#231'amento'
+              Width = 88
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CAI_IDVENDA'
+              Title.Caption = 'N'#250'm. Venda'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CAI_DATAHORA'
+              Title.Caption = 'Data'
+              Width = 135
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CAI_TIPO'
+              Title.Caption = 'Tipo'
+              Width = 67
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CAI_VALOR'
+              Title.Caption = 'Valor'
+              Width = 100
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CAI_DESCRICAO'
+              Title.Caption = 'Descri'#231#227'o'
+              Visible = True
+            end>
+        end
+      end
+      inherited Card_cadastro: TCard
+        inherited Panel2: TPanel
+          inherited Label11: TLabel
+            Width = 892
+            Height = 29
+          end
+        end
+      end
+    end
+  end
+  inherited DSDados: TDataSource
+    DataSet = ServiceCadastro.QRY_cadCaixa
+  end
+end

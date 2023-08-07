@@ -1,0 +1,142 @@
+unit view.mensagens;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Vcl.Buttons, Vcl.Imaging.pngimage;
+
+type
+  TMyButtons = (mbSim, mbNao, mbOk);
+
+type
+  TViewMensagens = class(TViewBase)
+    PnlImagens: TPanel;
+    PnlConteudo: TPanel;
+    PnlTitulo: TPanel;
+    PnlBotoes: TPanel;
+    mmoTexto: TMemo;
+    LabelTitulo: TLabel;
+    BtnSim: TSpeedButton;
+    BtnNao: TSpeedButton;
+    BtnOk: TSpeedButton;
+    PanelAmerelinho3: TPanel;
+    imgAlert: TImage;
+    imgErro: TImage;
+    imgInfo: TImage;
+    procedure BtnSimClick(Sender: TObject);
+    procedure BtnNaoClick(Sender: TObject);
+    procedure BtnOkClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    class function Mensagens (Texto: String; Titulo: String; Tipo: Char; Botoes: array of TMyButtons): Boolean;
+  end;
+
+var
+  ViewMensagens: TViewMensagens;
+
+implementation
+
+{$R *.dfm}
+
+{ TViewMensagens }
+//TRATANDO OS BOTOES
+procedure TViewMensagens.BtnNaoClick(Sender: TObject);
+begin
+  inherited;
+    ModalResult := mrNo;  // Define o resultado como "nao"
+    //Close;                // Fecha o formulário pai
+end;
+
+procedure TViewMensagens.BtnOkClick(Sender: TObject);
+begin
+  inherited;
+     ModalResult := mrOk;  // Define o resultado como "ok"
+     Close;                // Fecha o formulário pai
+end;
+
+procedure TViewMensagens.BtnSimClick(Sender: TObject);
+begin
+  inherited;
+  ModalResult := mrYes;  // Define o resultado como "Sim"
+  //Close;                // Fecha o formulário pai
+end;
+
+class function TViewMensagens.Mensagens(Texto, Titulo: String; Tipo: Char;
+  Botoes: array of TMyButtons): Boolean;
+var
+  i: Integer;
+  view: TViewMensagens;
+begin
+  view := TViewMensagens.Create(nil);
+  try
+    view.LabelTitulo.Caption := Titulo;
+    view.mmoTexto.Text := Texto;
+
+      for i := 0 to Length(Botoes)-1 do
+        begin
+
+          case (Botoes[i]) of
+            mbOk: begin
+              view.BtnOk.Visible := True;
+              view.BtnOk.Align := alRight;
+            end;
+
+            mbSim: begin
+              view.BtnSim.Visible := True;
+              view.BtnSim.Align := alRight;
+            end;
+
+            mbNao: begin
+              view.BtnNao.Visible := True;
+              view.BtnNao.Align := alRight;
+            end;
+
+          else begin
+            view.BtnOk.Visible := True;
+            view.BtnOk.Align := alRight;
+          end;
+
+          end;
+
+        end;
+
+  //TIPO DE IMAGEM
+  case (Tipo) of
+    'I': begin
+      view.imgInfo.Visible := True; //imagem info
+    end;
+
+    'A': begin
+      view.imgAlert.Visible := True; //imagem alerta
+    end;
+
+    'E': begin
+      view.imgErro.Visible := True; //imagem erro
+    end;
+
+    else begin
+       view.imgInfo.Visible := True; //imagem info
+    end;
+  end;
+
+  view.ShowModal; //MOSTRAR O FORMULARIO MENSAGENS
+
+  //configurar os botoes para a respostas
+  case (view.ModalResult) of
+    mrOk, mrYes : result := True;
+    else
+      result := False;
+  end;
+
+  finally
+    if (view <> nil) then
+      FreeAndNil(view);
+  end;
+
+end;
+
+end.

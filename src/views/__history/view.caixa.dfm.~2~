@@ -1,0 +1,68 @@
+inherited ViewCaixa: TViewCaixa
+  Caption = 'ViewCaixa'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited PanelLinhadefundo: TPanel
+    inherited CardPanel_Lista: TCardPanel
+      inherited Card_pesquisa: TCard
+        inherited PanelTopo: TPanel
+          inherited LabelTitulo: TLabel
+            Width = 892
+            Height = 29
+            Caption = 'CAIXA'
+            ExplicitWidth = 56
+          end
+        end
+        inherited DBG_dados: TDBGrid
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'CAI_CODIGO'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CAI_DATAHORA'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CAI_TIPO'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CAI_VALOR'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CAI_DESCRICAO'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CAI_IDFORMAPGTO'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CAI_IDVENDA'
+              Visible = True
+            end>
+        end
+      end
+      inherited Card_cadastro: TCard
+        inherited Panel2: TPanel
+          inherited Label11: TLabel
+            Width = 892
+            Height = 29
+          end
+        end
+      end
+    end
+  end
+  inherited DSDados: TDataSource
+    DataSet = ServiceCadastro.QRY_cadCaixa
+  end
+end

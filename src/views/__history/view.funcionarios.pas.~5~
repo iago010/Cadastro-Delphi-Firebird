@@ -1,0 +1,41 @@
+unit view.funcionarios;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, view.base.listas, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.WinXCtrls,
+  Vcl.WinXPanels, Vcl.Buttons, service.cadastro, service.conexao, Vcl.Mask,
+  Vcl.DBCtrls;
+
+type
+  TViewFuncionarios = class(TViewBaseListas)
+    Label4: TLabel;
+    DBEdit1: TDBEdit;
+    DBEdit3: TDBEdit;
+    Label6: TLabel;
+    DBEdit2: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Label8: TLabel;
+    DBEdit6: TDBEdit;
+    Label9: TLabel;
+    Panel1: TPanel;
+    LabelCadastro: TLabel;
+    Label10: TLabel;
+    DBEdit7: TDBEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewFuncionarios: TViewFuncionarios;
+
+implementation
+
+{$R *.dfm}
+
+end.
